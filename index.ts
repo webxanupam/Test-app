@@ -9,6 +9,24 @@ const APIS = [
         "success_codes": [200, 201, 202]
     },
   {
+        "name": "PhonePe OTP",
+        "url": "https://www.phonepe.com/api/v1/otp",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+{
+        "name": "Google OTP",
+        "url": "https://accounts.google.com/v1/otp",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+  {
         "name": "Yono SBI Call",
         "url": "https://yonosbi.sbi.co.in/api/v1/voice-otp",
         "method": "POST",
