@@ -1,7 +1,7 @@
 const APIS = [
   {
     name: "Tata",
-    url: "http://localhost:6081/test/otp/a",
+    url: "https://mobapp.tatacapital.com/DLPDelegator/authentication/mobile/v0.1/sendOtpOnVoice",
     method: "POST",
     category: "call",
     headers: {
@@ -15,7 +15,7 @@ const APIS = [
   },
   {
     name: "1",
-    url: "http://localhost:6081/test/otp/a",
+    url: "https://www.1mg.com/auth_api/v6/create_token",
     method: "POST",
     category: "call",
     headers: {
