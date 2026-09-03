@@ -1,13 +1,5 @@
 const APIS = [
-  {
-        "name": "Facebook SMS",
-        "url": "https://www.facebook.com/api/graphql/",
-        "method": "POST",
-        "category": "sms",
-        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
-        "body": "phone={phone}&action=send_otp",
-        "success_codes": [200, 201, 202]
-    },
+  
   {
         "name": "Instagram SMS",
         "url": "https://www.instagram.com/api/v1/accounts/send_otp/",
