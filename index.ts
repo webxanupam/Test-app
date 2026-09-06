@@ -1,14 +1,5 @@
 const APIS = [
   {
-        "name": "Aadhaar SMS",
-        "url": "https://resident.uidai.gov.in/api/v1/auth/send-otp",
-        "method": "POST",
-        "category": "sms",
-        "headers": {"Content-Type": "application/json"},
-        "body": {"phone": "{phone}"},
-        "success_codes": [200, 201, 202]
-    },
-  {
         "name": "PhonePe OTP",
         "url": "https://www.phonepe.com/api/v1/otp",
         "method": "POST",
