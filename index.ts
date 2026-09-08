@@ -28,15 +28,6 @@ const APIS = [
   },
   
   {
-        "name": "Paytm Voice Call",
-        "url": "https://accounts.paytm.com/signin/voice-otp",
-        "method": "POST",
-        "category": "call",
-        "headers": {"Content-Type": "application/json"},
-        "body": {"phone": "{phone}"},
-        "success_codes": [200, 201, 202]
-    },
-  {
         "name": "Oyo Voice Call",
         "url": "https://www.oyorooms.com/api/product/v1/staticpage/sendCallOTP",
         "method": "POST",
@@ -54,24 +45,8 @@ const APIS = [
         "body": {"mobile": "{phone}"},
         "success_codes": [200, 201, 202]
     },
-  {
-        "name": "PayMe India SMS",
-        "url": "https://api.paymeindia.in/api/v2/authentication/phone_no_verify/",
-        "method": "POST",
-        "category": "sms",
-        "headers": {"Content-Type": "application/json"},
-        "body": {"phone": "{phone}", "app_signature": "S10ePIIrbH3"},
-        "success_codes": [200, 201, 202]
-    },
-  {
-        "name": "MyGov SMS",
-        "url": "https://auth.mygov.in/regapi/register_api_ver1/",
-        "method": "GET",
-        "category": "sms",
-        "headers": {},
-        "params": {"api_key": "57076294a5e2ab7fe000000112c9e964291444e07dc276e0bca2e54b", "name": "raj", "email": "", "gateway": "91", "mobile": "{phone}", "gender": "male"},
-        "success_codes": [200, 201, 202]
-    },
+  
+
   
 ] as const;
 
